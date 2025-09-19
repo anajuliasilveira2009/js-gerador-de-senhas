@@ -26,7 +26,7 @@ function diminuiTamanho(){
 function aumentaTamanho(){
     if (tamanhoSenha > 20) {
         //tamanhoSenha = tamanhoSenha - 1
-        tamanhoSenha--;
+        tamanhoSenha++;
     }
     numeroSenha.textContent = tamanhoSenha;
     geraSenha();
@@ -61,10 +61,11 @@ function geraSenha(){
         senha = senha + alfabeto[numeroAleatorio];
     }
     campoSenha.value = senha;
+    classificaSenha(alfabeto.length);
 }
 
 function classificaSenha(tamanhoAlfaeto){
-    let entropia = tamanhoSenha * Math.log2(tamanhoAlfaeto):
+    let entropia = tamanhoSenha * Math.log2(tamanhoAlfaeto);
     console.log(entropia);
     forcaSenha.classList.remove('fraca', 'media', 'forte');
     if (tamanhoSenha > 11){
@@ -75,5 +76,5 @@ function classificaSenha(tamanhoAlfaeto){
         forcaSenha.classList.add('fraca');
     }
     const valorEntropia = document.querySelector('.entropia');
-    valorEntropia.textContent = 2**Math.floor(entropia)/(100e6*60*60*24);
+    valorEntropia.textContent = "Um computador pode levar até " + Math.floor(2** entropia /(100e6*60*60*24)) + "dias para descobrir essa senha.";
 }
