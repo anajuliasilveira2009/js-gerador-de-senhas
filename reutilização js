@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>...</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script src="main.js"></script>
+</body>
+</html>
+
+Serve para qualquer site
+:root{
+    --cor-de-fundo: #00162e;
+    --borda: #0075FF;
+}
+Centralizar conteúdo (serve pra tudo)
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+JavaScript – Parte MAIS importante
+document.querySelector()
+document.querySelectorAll()
