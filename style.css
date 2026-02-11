@@ -1,158 +1,267 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+/* Importa fontes do Google Fonts */
 
 :root{
-    --branco: white;
-    --cor-de-fundo: #00162e;
-    --fundo-senha: #00244d;
-    --fundo-texto: #001E40;
-    --borda: #0075FF;
-    --roboto: 'Roboto', sans-serif;
-    --roboto-mono: 'Roboto Mono', monospace;
+    /* Variáveis globais do CSS (podem ser reutilizadas no código inteiro) */
+    --branco: white; /* Cor branca */
+    --cor-de-fundo: #00162e; /* Cor principal de fundo da página */
+    --fundo-senha: #00244d; /* Cor de fundo da área da senha */
+    --fundo-texto: #001E40; /* Cor de fundo da área de parâmetros */
+    --borda: #0075FF; /* Cor das bordas */
+    --roboto: 'Roboto', sans-serif; /* Fonte padrão */
+    --roboto-mono: 'Roboto Mono', monospace; /* Fonte monoespaçada */
 }
 
 * { 
     font-weight: 400;
+    /* Define peso padrão da fonte para todos os elementos */
 }
 
 body{
     color:var(--branco);
+    /* Cor padrão do texto */
+
     background-color: var(--cor-de-fundo);
+    /* Cor de fundo da página */
+
     font-family: var(--roboto);
+    /* Define a fonte padrão */
 }
 
 .titulo-principal{
     font-family: var(--roboto-mono);
+    /* Fonte diferente para o título principal */
+
     font-size: 32px;
+    /* Tamanho do título principal */
 }
 
 .titulo-secundario{
     font-size: 24px;
+    /* Tamanho do subtítulo */
 }
 
 .conteudo-titulo{
     text-align: center;
+    /* Centraliza o texto */
+
     margin-top: 80px;
+    /* Espaço acima do título */
 }
 
 .conteudo-senha{
     margin-top: 80px;
+    /* Espaço acima da área da senha */
+
     background: var(--fundo-senha);
+    /* Cor de fundo */
+
     padding: 24px;
+    /* Espaçamento interno */
+
     border-bottom: 6px solid var(--borda);
+    /* Borda inferior azul */
 }
 
 #campo-senha{
     background-color: var(--fundo-senha);
+    /* Fundo igual ao da área da senha */
+
     border: none;
+    /* Remove borda padrão */
+
     color: var(--branco);
+    /* Cor do texto */
+
     font-family: var(--roboto-mono);
+    /* Fonte monoespaçada */
+
     font-size: 40px;
+    /* Tamanho grande para destacar senha */
+
     width: 70%;
+    /* Largura de 70% do container */
 }
 
 #campo-senha:focus{
     outline: none;
+    /* Remove borda azul quando clicado */
 }
 
 .conteudo {
     max-width: 1200px;
+    /* Largura máxima da página */
+
     margin: 0 auto;
+    /* Centraliza horizontalmente */
 }
 
 .parametro{
     background-color: var(--fundo-texto);
+    /* Fundo da área de personalização */
+
     border: 2px solid var(--borda);
+    /* Borda azul */
+
     margin-top: 32px;
+    /* Espaço acima */
+
     padding: 24px;
+    /* Espaçamento interno */
 }
 
 .parametro-titulo{
     font-family: var(--roboto-mono);
+    /* Fonte do título da seção */
+
     font-size: 28px;
+    /* Tamanho da fonte */
 }
 
 .parametro-senha__titulo{
     font-size: 24px;
+    /* Tamanho dos subtítulos */
 }
 
 .parametro-coluna__titulo{
     display: flex;
+    /* Ativa flexbox */
+
     flex-direction: column;
+    /* Organiza em coluna */
+
     justify-content: center;
+    /* Centraliza verticalmente */
 }
 
 .parametro-senha{
     width: 50%;
+    /* Ocupa metade da largura */
+
     margin: 0 auto;
+    /* Centraliza */
 }
 
 .parametro-senha-botoes{
     display: flex;
+    /* Ativa flexbox */
+
     justify-content: center;
+    /* Centraliza botões */
 }
 
 .parametro-senha__botao{
     background-color: var(--fundo-texto);
+    /* Cor de fundo */
+
     color: var(--branco);
+    /* Cor do texto */
+
     border: 2px solid var(--borda);
+    /* Borda azul */
+
     padding: 24px;
+    /* Espaçamento interno */
+
     font-size: 24px;
+    /* Tamanho do texto */
+
     cursor: pointer;
+    /* Mostra mãozinha ao passar o mouse */
 }
 
 .parametro-senha__texto{
     padding: 24px;
+    /* Espaçamento interno */
+
     border-top: 2px solid var(--borda);
+    /* Borda superior */
+
     border-bottom: 2px solid var(--borda);
+    /* Borda inferior */
+
     margin: 0;
+    /* Remove margem padrão */
+
     font-size: 24px;
+    /* Tamanho do número */
 }
 
 label{
     font: size 20px;
+    /* (Aqui há um erro) A propriedade correta seria font-size: 20px; */
 }
 
 .checkbox{
     width: 20px;
+    /* Largura da caixa */
+
     height: 20px;
+    /* Altura da caixa */
+
     cursor: pointer;
+    /* Mostra mãozinha */
 }
 
 .barra{
     background-color: var(--fundo-senha);
+    /* Cor da barra base */
+
     height: 30px;
+    /* Altura da barra */
+
     width: 100%;
+    /* Ocupa toda largura */
 }
 
 .forca{
     height: 30px;
+    /* Altura da barra de força */
+
     position: relative;
+    /* Permite mover posição */
+
     bottom: 30px;
+    /* Sobe 30px para ficar sobre a barra */
 }
 
 .fraca{
     width: 25px;
+    /* Barra pequena */
+
     background-color:#E71B32;
+    /* Vermelho */
 }
 
 .media{
     width: 50%;
+    /* Metade da barra */
+
     background-color: #FAF408;
+    /* Amarelo */
 }
 
 .forte{
     width: 100%;
+    /* Barra completa */
+
     background-color: #00ff85;
+    /* Verde */
 }
 
 .parametro-senha-texto{
     display: flex;
+    /* Flexbox */
+
     justify-content: space-between;
+    /* Espaça os textos igualmente */
 }
 
 @media screen and(min-width: 768px){
+    /* (Aqui há um erro de sintaxe: falta espaço entre and e (min-width)) */
+
     .parametro-coluna__senha{
         flex-direction: row;
+        /* Em telas maiores organiza em linha */
     }  
 }
-
